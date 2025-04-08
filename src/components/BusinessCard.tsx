@@ -9,11 +9,14 @@ interface BusinessCardProps {
 const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-      <img 
-        src={business.imageUrl} 
-        alt={business.name}
-        className="w-full h-48 object-cover"
-      />
+      {/* Contenedor con aspect-ratio */}
+      <div className="w-full aspect-[3/2] bg-gray-100">
+  <img 
+    src={business.imageUrl} 
+    alt={business.name}
+    className="w-full h-full object-contain"
+  />
+</div>
       <div className="p-6">
         <h3 className="text-xl font-semibold text-primary-900 mb-2">{business.name}</h3>
         <p className="text-gray-600 mb-4">{business.description}</p>

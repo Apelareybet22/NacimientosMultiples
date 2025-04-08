@@ -1,25 +1,27 @@
-import { Business } from '../types';
+import { Business } from '../types'; 
 
 export const businesses: Business[] = [
   {
     id: '1',
-    name: 'Baby Dreams UY',
-    description: 'Tienda especializada en artículos para bebés múltiples. 15% de descuento en toda la tienda.',
-    imageUrl: 'https://images.unsplash.com/photo-1555009393-f20bdb245c4d?auto=format&fit=crop&q=80&w=500',
-    instagramUrl: 'https://instagram.com/babydreamsuy'
-  },
-  {
-    id: '2',
-    name: 'Twins & More',
-    description: 'Ropa y accesorios para gemelos y mellizos. 20% de descuento en la segunda unidad.',
-    imageUrl: 'https://images.unsplash.com/photo-1619784299133-f691ffaea42f?auto=format&fit=crop&q=80&w=500',
-    instagramUrl: 'https://instagram.com/twinsandmore'
-  },
-  {
-    id: '3',
-    name: 'Family Care',
-    description: 'Servicios de cuidado infantil especializado. 25% de descuento para familias múltiples.',
-    imageUrl: 'https://images.unsplash.com/photo-1543342384-1f1350e27861?auto=format&fit=crop&q=80&w=500',
-    instagramUrl: 'https://instagram.com/familycare'
+    name: 'A comer uy',
+    description: 'Comida congelada saludable y asesorías en alimentación infantil. 25% de descuento para familias múltiples.',
+    imageUrl: '../images/Logo.svg',
+    instagramUrl: 'https://www.instagram.com/acomer_uy/'
   }
-];
+,    {
+      id: '2',
+      name: 'El refugio uy',
+      description: 'DESCARTABLES, ELIQUIDS Y MUCHO MÁS. 25% de descuento para familias múltiples.',
+      imageUrl: '../images/Elrefugiologo.svg',
+      instagramUrl: 'https://www.elrefugiouy.com/'
+    }
+    ,    {
+      id: '3',
+      name: 'Praline',
+      description: 'Chocolates y dulces artesanales. 25% de descuento para familias múltiples.',
+      imageUrl: '../images/pralinelogo.svg',
+      instagramUrl: 'https://www.instagram.com/pralineuruguay/'
+    }
+
+
+  ];
