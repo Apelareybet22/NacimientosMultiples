@@ -92,57 +92,60 @@ const styles = StyleSheet.create({
   },
 });
 
-const CredentialDocument = ({ data, credentialNumber }: { data: CredentialForm; credentialNumber: string }) => (
-  <Document>
-    <Page size="A6" style={styles.page}>
-      {/* Watermark */}
-      <Text style={styles.watermark}>MÚLTIPLES UY</Text>
+const CredentialDocument = ({ data, credentialNumber }: { data: CredentialForm; credentialNumber: string }) => {
+  console.log('Datos recibidos en CredentialDocument:', data, credentialNumber); // Verifica los datos
 
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Credencial Múltiple</Text>
-        {/* You can replace this with your actual logo */}
-        <Image
-          style={styles.logo}
-          src="https://images.unsplash.com/photo-1555009393-f20bdb245c4d?auto=format&fit=crop&q=80&w=100"
-        />
-      </View>
+  return (
+    <Document>
+      <Page size="A6" style={styles.page}>
+        {/* Watermark */}
+        <Text style={styles.watermark}>MÚLTIPLES UY</Text>
 
-      {/* Discount Label */}
-      <Text style={styles.title}>DESCUENTO MÚLTIPLE</Text>
-
-      {/* Parent Information */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>TITULAR</Text>
-        <Text style={styles.sectionContent}>
-          {data.parentFirstName} {data.parentLastName}
-        </Text>
-        <Text style={[styles.sectionContent, { marginTop: 5 }]}>
-          CI: {data.parentId}
-        </Text>
-      </View>
-
-      {/* Children Information */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>HIJOS</Text>
-        <View style={styles.childrenContainer}>
-          <Text style={styles.childBadge}>{data.child1Name}</Text>
-          <Text style={styles.childBadge}>{data.child2Name}</Text>
-          {data.child3Name && <Text style={styles.childBadge}>{data.child3Name}</Text>}
+        {/* Header */}
+        <View style={styles.header}>
+          <Text style={styles.headerText}>Credencial Múltiple</Text>
+          <Image
+            style={styles.logo}
+            src="https://images.unsplash.com/photo-1555009393-f20bdb245c4d?auto=format&fit=crop&q=80&w=100"
+          />
         </View>
-      </View>
 
-      {/* Birth Date */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>FECHA DE NACIMIENTO</Text>
-        <Text style={styles.sectionContent}>{data.dateOfBirth}</Text>
-      </View>
+        {/* Discount Label */}
+        <Text style={styles.title}>DESCUENTO MÚLTIPLE</Text>
 
-      {/* Credential Number */}
-      <Text style={styles.credentialNumber}>N° {credentialNumber}</Text>
-    </Page>
-  </Document>
-);
+        {/* Parent Information */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>TITULAR</Text>
+          <Text style={styles.sectionContent}>
+            {data.parentFirstName} {data.parentLastName}
+          </Text>
+          <Text style={[styles.sectionContent, { marginTop: 5 }]}>
+            CI: {data.parentId}
+          </Text>
+        </View>
+
+        {/* Children Information */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>HIJOS</Text>
+          <View style={styles.childrenContainer}>
+            {data.child1Name && <Text style={styles.childBadge}>{data.child1Name}</Text>}
+            {data.child2Name && <Text style={styles.childBadge}>{data.child2Name}</Text>}
+            {data.child3Name && <Text style={styles.childBadge}>{data.child3Name}</Text>}
+          </View>
+        </View>
+
+        {/* Birth Date */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>FECHA DE NACIMIENTO</Text>
+          <Text style={styles.sectionContent}>{data.dateOfBirth}</Text>
+        </View>
+
+        {/* Credential Number */}
+        <Text style={styles.credentialNumber}>N° {credentialNumber}</Text>
+      </Page>
+    </Document>
+  );
+};
 
 const Credential = () => {
   const [formData, setFormData] = useState<CredentialForm>({
@@ -284,7 +287,7 @@ const Credential = () => {
                   fileName={`credencial-multiple-${formData.parentLastName}.pdf`}
                   className="w-full bg-emerald-600 text-white py-3 px-6 rounded-md hover:bg-emerald-700 transition-colors flex items-center justify-center"
                 >
-                  {({ loading }) =>
+                  {({ loading }: { loading: boolean }) =>
                     loading ? 'Generando PDF...' : 'Descargar Credencial'
                   }
                 </PDFDownloadLink>
