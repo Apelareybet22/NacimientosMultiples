@@ -13,7 +13,15 @@ const Benefits = () => {
           con múltiples
         </p>
         <p className="text-base text-primary-700 text-center mb-10 max-w-2xl mx-auto font-poppins">
-          Si queres acceder a los descuentos multiples, envia un email con foto de tu CI y la foto de las CI de tus multiples a xxxx@gmail.com
+          Tenés hijos producto de un nacimiento múltiple?{" "}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfD4EXAMPLE/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-600 hover:text-primary-800 font-medium"
+          >
+            Regístrate para obtener beneficios aquí.
+          </a>
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {businesses.map((business) => (

@@ -6,12 +6,7 @@ export interface Business {
   instagramUrl: string;
 }
 
-export interface CredentialForm {
-  parentFirstName: string;
-  parentLastName: string;
-  parentId: string;
-  child1Name: string;
-  child2Name: string;
-  child3Name?: string;
-  dateOfBirth: string;
+export interface RegistroForm {
+  googleForm: string;
+  
 }
