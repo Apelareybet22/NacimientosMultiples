@@ -1,9 +1,8 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Benefits from './pages/Benefits';
-import Credential from './pages/Credential';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Benefits from "./pages/Benefits";
+import UsefulInformation from "./pages/UsefulInformation"; // Asegúrate de que el nombre sea correcto
 
 function App() {
   return (
@@ -13,7 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/benefits" element={<Benefits />} />
-          <Route path="/credential" element={<Credential />} />
+          <Route path="/usefulinfo" element={<UsefulInformation />} />{" "}
+          {/* Usa el componente correcto */}
         </Routes>
       </div>
     </Router>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Heart, Users, Phone } from 'lucide-react';
+import { Heart, Users, Phone } from "lucide-react";
 
 const Home = () => {
   return (
@@ -7,10 +6,10 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary-900 mb-4">
-            Nacimientos Múltiples UY
+          <h1 className="text-4xl md:text-6xl font-bold text-primary-900 mb-4 font-poppins">
+            Bienvenido a Nacimientos Múltiples UY
           </h1>
-          <p className="text-xl text-primary-700 max-w-2xl mx-auto">
+          <p className="text-xl text-primary-700 max-w-2xl mx-auto font-poppins">
             Apoyando a las familias con nacimientos múltiples en Uruguay
           </p>
         </div>
@@ -18,10 +17,11 @@ const Home = () => {
         {/* Mission Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-6 rounded-lg shadow-md text-center">
-            <Heart className="h-12 w-12 text-primary-500 mx-auto mb-4" />
+            <Heart className="h-12 w-12 text-primary-500 mx-auto mb-4 font-poppins" />
             <h2 className="text-xl font-semibold mb-2">Nuestra Misión</h2>
             <p className="text-gray-600">
-              Brindar apoyo y recursos a familias con nacimientos múltiples en Uruguay
+              Brindar apoyo y recursos a familias con nacimientos múltiples en
+              Uruguay
             </p>
           </div>
 
@@ -56,7 +56,17 @@ const Home = () => {
                 href="mailto:contacto@nacimientosmultiples.uy"
                 className="text-primary-600 hover:text-primary-800 font-medium"
               >
-                contacto@nacimientosmultiples.uy
+                nacimientosmultiplesuruguay@gmail.com
+                <div className="text-center">
+                  <a
+                    href="https://www.instagram.com/nacimientosmultiples.uy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-800 font-medium"
+                  >
+                    Síguenos en Instagram: @nacimientosmultiples.uy
+                  </a>
+                </div>
               </a>
             </div>
           </div>
