@@ -7,7 +7,7 @@ const Home = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-primary-900 mb-4 font-poppins">
-            Bienvenido a Nacimientos Múltiples UY
+            Nacimientos Múltiples UY
           </h1>
           <p className="text-xl text-primary-700 max-w-2xl mx-auto font-poppins">
             Apoyando a las familias con nacimientos múltiples en Uruguay

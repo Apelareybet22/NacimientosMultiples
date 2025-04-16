@@ -1,4 +1,5 @@
 import React from "react";
+import Accordion from "../components/Accordion";
 
 const UsefulInformation: React.FC = () => {
   return (
@@ -9,12 +10,7 @@ const UsefulInformation: React.FC = () => {
         </h1>
 
         {/* Ley Federica */}
-        <section className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-2xl font-semibold text-emerald-600 mb-4">
-            Ley Federica - Ley 20.000
-          </h2>
-
-          {/* Artículo 1 */}
+        <Accordion title="Ley Federica - Ley 20.000" content="Información sobre la Ley Federica - Ley 20.000">
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-emerald-500 mb-2">
               Artículo 1
@@ -149,14 +145,10 @@ const UsefulInformation: React.FC = () => {
               </p>
             </blockquote>
           </div>
-        </section>
+        </Accordion>
 
         {/* Ley de Múltiples */}
-        <section className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-semibold text-emerald-600 mb-4">
-            Ley de Múltiples - Ley 20.365
-          </h2>
-
+        <Accordion title="Ley de Multiples - Ley 20.365" content="Información sobre la Ley de Multiples">
           {/* Artículo 1 */}
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-emerald-500 mb-2">
@@ -287,10 +279,10 @@ const UsefulInformation: React.FC = () => {
               efectivos desde la fecha de vigencia, independientemente de los
               procesos administrativos."
             </blockquote>
-          </div>
-        </section>
-      </div>
+        </div>
+      </Accordion>
+    </div>
     </div>
   );
-};
-export default UsefulInformation;
+}    
+  export default UsefulInformation;
